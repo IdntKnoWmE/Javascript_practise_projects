@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "category": "Algorithms",
+    "question": "What is the worst-case time complexity of finding a cycle in a directed graph using Depth-First Search (DFS)?",
+    "options": [
+      "O(V + E)",
+      "O(V^2)",
+      "O(E log V)",
+      "O(V log V)"
+    ],
+    "correct_answer": "O(V + E)",
+    "explanation": "In a directed graph, a DFS traverses every vertex (V) and edge (E) exactly once, making the time complexity O(V + E) using an adjacency list."
+  },
+  {
+    "id": 2,
+    "category": "Asynchronous Programming",
+    "question": "In JavaScript, what is the output order of the `Promise.all()` method if one of the promises fails (rejects)?",
+    "options": [
+      "It waits for all promises to settle and returns an array of results.",
+      "It immediately rejects and ignores the other resolving promises.",
+      "It resolves only the successful promises.",
+      "It cancels the execution of all ongoing promises."
+    ],
+    "correct_answer": "It immediately rejects and ignores the other resolving promises.",
+    "explanation": "Promise.all() has a 'fail-fast' behavior. If any promise rejects, the resulting promise immediately rejects with the reason of the first promise that rejected."
+  },
+  {
+    "id": 3,
+    "category": "Data Structures",
+    "question": "Which of the following data structures provides an average time complexity of O(1) for both search and update operations, but O(N) in the worst case?",
+    "options": [
+      "Red-Black Tree",
+      "Hash Table",
+      "AVL Tree",
+      "Min-Heap"
+    ],
+    "correct_answer": "Hash Table",
+    "explanation": "Hash Tables achieve O(1) average time complexity. However, in the worst-case scenario (e.g., severe hash collisions resulting in a linked list), the search time degrades to O(N)."
+  },
+  {
+    "id": 4,
+    "category": "System Design",
+    "question": "Which of the following caching strategies is best suited for read-heavy applications where data is updated infrequently, and the database should not be overloaded by cache misses?",
+    "options": [
+      "Write-through caching",
+      "Cache-aside (Lazy loading)",
+      "Write-behind (Write-back)",
+      "Write-around"
+    ],
+    "correct_answer": "Cache-aside (Lazy loading)",
+    "explanation": "In Cache-aside, the application only queries the cache if requested. If there's a miss, it fetches from the database, populates the cache, and returns it. This protects the cache from holding unused data."
+  },
+  {
+    "id": 5,
+    "category": "Databases",
+    "question": "What is the 'N+1 query problem' in the context of Object-Relational Mapping (ORM)?",
+    "options": [
+      "Executing N queries in parallel, resulting in a deadlock.",
+      "Fetching a list of parent entities, then executing N additional queries to fetch their children, resulting in performance degradation.",
+      "Updating N rows simultaneously without a transaction.",
+      "Indexing N+1 columns in a database table."
+    ],
+    "correct_answer": "Fetching a list of parent entities, then executing N additional queries to fetch their children, resulting in performance degradation.",
+    "explanation": "The N+1 problem occurs when an application executes 1 initial query to retrieve N records, and then issues N subsequent queries to fetch the associated data. Using 'JOIN' or 'eager loading' prevents this."
+  },
+  {
+    "id": 6,
+    "category": "Concurrency & Operating Systems",
+    "question": "What is the primary difference between a spinlock and a traditional mutex?",
+    "options": [
+      "A spinlock puts the thread to sleep, while a mutex consumes CPU cycles.",
+      "A spinlock continuously polls the lock condition in a tight loop, while a mutex yields CPU control to the scheduler.",
+      "Spinlocks can only be used in user space, while mutexes are kernel-only.",
+      "Mutexes are faster for short critical sections than spinlocks."
+    ],
+    "correct_answer": "A spinlock continuously polls the lock condition in a tight loop, while a mutex yields CPU control to the scheduler.",
+    "explanation": "Spinlocks cause a thread to busy-wait (spin) until the lock becomes available, avoiding context-switch overhead. This makes them efficient for short critical sections but highly wasteful for long waits."
+  },
+  {
+    "id": 7,
+    "category": "Memory Management",
+    "question": "How does a Generational Garbage Collector optimize memory reclamation?",
+    "options": [
+      "It completely eliminates memory fragmentation by allocating fixed-size blocks.",
+      "It groups objects by type and clears memory based on alphabetical order.",
+      "It operates on the empirical observation that most created objects die young, scanning newly allocated memory more frequently than long-lived objects.",
+      "It requires developers to manually tag objects for deletion using reference tracking."
+    ],
+    "correct_answer": "It operates on the empirical observation that most created objects die young, scanning newly allocated memory more frequently than long-lived objects.",
+    "explanation": "Generational collectors divide memory into generations (e.g., Young, Old). Since most objects become unreachable quickly, scanning the Young generation frequently keeps garbage collection pauses short."
+  },
+  {
+    "id": 8,
+    "category": "Distributed Systems",
+    "question": "According to the CAP theorem, how must a distributed system behave during a network partition?",
+    "options": [
+      "It must sacrifice both consistency and availability to prevent data corruption.",
+      "It must choose between guaranteed Availability (returning local data) or absolute Consistency (refusing requests until the partition resolves).",
+      "It must automatically resolve the partition within a millisecond using vector clocks.",
+      "It must drop network data packets until the master node reboots."
+    ],
+    "correct_answer": "It must choose between guaranteed Availability (returning local data) or absolute Consistency (refusing requests until the partition resolves).",
+    "explanation": "The CAP theorem states that a distributed system cannot guarantee Consistency, Availability, and Partition Tolerance simultaneously. During a partition (P), the system must explicitly trade off Consistency (C) or Availability (A)."
+  },
+  {
+    "id": 9,
+    "category": "Advanced Algorithms",
+    "question": "What is the optimal time complexity to compute the Longest Palindromic Substring of a string using Manacher's Algorithm?",
+    "options": [
+      "O(N^2)",
+      "O(N log N)",
+      "O(N)",
+      "O(2^N)"
+    ],
+    "correct_answer": "O(N)",
+    "explanation": "Manacher's Algorithm solves the longest palindromic substring problem in linear O(N) time. It achieves this by reusing symmetry properties of previously found palindromes to skip redundant character comparisons."
+  },
+  {
+    "id": 10,
+    "category": "Network Protocols",
+    "question": "How does HTTP/2 Multiplexing improve upon HTTP/1.1 pipelining?",
+    "options": [
+      "It forces the browser to open more TCP connections simultaneously.",
+      "It allows multiple request and response messages to be sent concurrently over a single TCP connection, eliminating head-of-line blocking at the application layer.",
+      "It compresses HTTP headers using the GZIP algorithm instead of HPACK.",
+      "It restricts the client from sending data until the server initiates a handshake."
+    ],
+    "correct_answer": "It allows multiple request and response messages to be sent concurrently over a single TCP connection, eliminating head-of-line blocking at the application layer.",
+    "explanation": "HTTP/2 breaks communications into binary frames and interleaves them across a single connection. This removes HTTP/1.1's head-of-line blocking where a slow response could block all subsequent requests."
+  }
+]

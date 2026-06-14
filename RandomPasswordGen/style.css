@@ -1,0 +1,162 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    min-height: 100vh;
+    color: white;
+    background: #4285f4;
+    background-size: cover;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    min-height: 100vh;
+    gap: 3rem;
+
+}
+.heading{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    min-height: 27vh;
+    box-shadow: 10px 10px 20px black;
+    background-color: lightskyblue;
+}
+
+.heading h1{
+    font-family: "American Typewriter";
+    padding: 10px;
+    margin: auto 0 auto 0;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+.vertical-block{
+    width: 5px;
+    background: white;
+    border: 1px solid white;
+    height: 29vh;
+}
+.password-generator-card{
+    display: flex;
+    flex-direction: column;
+
+    min-height: 54vh;
+    width: 400px;
+
+    border: 1px solid white;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 10px 10px 20px black;
+
+}
+
+.card-title{
+    font-weight: 500;
+    padding: 10px 0 0 10px;
+    font-family: "American Typewriter";
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 90%;
+    margin:0 auto 0 auto;
+}
+.display-password{
+    color: black;
+    background: lightgreen;
+    font-size: 1.06rem;
+    font-weight: 500;
+    border-radius: 4px;
+    letter-spacing: 1.4px;
+    border: 1px solid white;
+    padding: 5px 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.display-password input{
+    border: 0;
+    outline: 0;
+    font-size: 16px;
+    background: transparent;
+}
+.display-password input::selection{
+    background: white;
+}
+
+.display-password img{
+    width: 30px;
+    cursor: pointer;
+}
+.pass-indicator-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.pass-indicator{
+    background-color: #e0e0e0;
+    height: 4px;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 4px;
+}
+.pass-indicator #password-strength{
+    height: 100%;
+    transition: width 1s ease, background-color 1s ease;
+}
+#password-strength-text{
+    font-size: 12px;
+    font-weight: 500;
+    color: red;
+    margin: 0;
+}
+.pass-length{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.pass-length .details .title{
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2px;
+}
+.pass-length input{
+    height: 4px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.pass-length input:focus{
+    height: 6px;
+}
+.pass-length p{
+    font-size: 12px;
+    font-weight: 500;
+}
+.pass-settings-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+.pass-settings-container p{
+    font-size: 14px;
+    font-weight: 500;
+}
+.pass-settings{
+    margin-left: 15px;
+    font-size: 14px;
+    font-weight: 500;
+}
+.password-button{
+    margin-top: 10px;
+}

@@ -1,0 +1,6 @@
+
+
+// //https://api.openweathermap.org/data/2.5/weather?q=Delhi&
+//// appid=ec7fe854586a0701c54d26cd28284327&units=metric
+
+{"coord":{"lon":77.2167,"lat":28.6667},"weather":[{"id":721,"main":"Haze","description":"haze","icon":"50n"}],"base":"stations","main":{"temp":36.05,"feels_like":34.92,"temp_min":36.05,"temp_max":36.05,"pressure":1000,"humidity":24,"sea_level":1000,"grnd_level":976},"visibility":5000,"wind":{"speed":1.54,"deg":170},"clouds":{"all":0},"dt":1779908875,"sys":{"type":1,"id":9165,"country":"IN","sunrise":1779926090,"sunset":1779975734},"timezone":19800,"id":1273294,"name":"Delhi","cod":200}

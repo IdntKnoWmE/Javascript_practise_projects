@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    min-height: 100vh;
+}
+body{
+    height: 100vh;
+    background: linear-gradient(180deg, lightyellow, skyblue, white, lightgreen, saddlebrown) no-repeat fixed;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    background: linear-gradient(160deg,white, blue);
+    width: 100%;
+    max-width: 540px;
+    margin: 20% auto 0;
+    border-radius: 10px;
+    padding: 30px;
+    border: 2px orangered solid;
+}
+#quiz-ques-answer h1{
+    font-weight: bolder;
+    color: light-dark(blue, white);
+    border-bottom: 1px solid skyblue;
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+#quiz{
+    padding: 20px 0;
+}
+#question{
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+#answer .btn{
+    border: 1px solid green;
+    font-weight: 525;
+    color: black;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-align: left;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+.prev-next-button{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
+}
+
+#next-button #prev-btn{
+    margin: 10px 0;
+    cursor: pointer;
+}
+#quiz-result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+#quiz-result h1{
+    font-weight: bolder;
+    color: light-dark(darkgreen, white);
+    border-bottom: 1px solid skyblue;
+    padding-bottom: 20px;
+    font-size: 40px;
+}
+.circular-ring{
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.progress-ring__background{
+    stroke-width: 10;
+    fill: transparent;
+    stroke: lightgrey;
+}
+.progress-ring__circle {
+    /* Rotates the stroke start point from 3 o'clock to 12 o'clock */
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke: cornflowerblue;
+    fill: transparent;
+    stroke-width: 10;
+    stroke-dasharray: 314 314; /* radius was 50 so, circumference is 314*/
+    stroke-dashoffset: 314;
+}
+.progress-text {
+    position: absolute;
+    font-family: sans-serif;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+.restart-finish-button{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    width: 90%;
+}
+
+#restart-btn #finish-btn{
+    margin: 10px 0;
+    cursor: pointer;
+}
+#start-quiz {
+    transition: transform 0.3s ease;
+}
+#start-quiz:hover {
+    transform: translateY(-5px);
+}
+#start-btn {
+    transition: all 0.2s ease;
+}
+#start-btn:hover {
+    transform: scale(1.02);
+}
+#quiz-result{
+    display: none;
+}
+#quiz-ques-answer{
+    display: none;
+}

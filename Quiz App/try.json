@@ -1,0 +1,15 @@
+[
+  {
+    "id": 1,
+    "category": "Algorithms",
+    "question": "What is the worst-case time complexity of finding a cycle in a directed graph using Depth-First Search (DFS)?",
+    "options": [
+      "O(V + E)",
+      "O(V^2)",
+      "O(E log V)",
+      "O(V log V)"
+    ],
+    "correct_answer": "O(V + E)",
+    "explanation": "In a directed graph, a DFS traverses every vertex (V) and edge (E) exactly once, making the time complexity O(V + E) using an adjacency list."
+  }
+]

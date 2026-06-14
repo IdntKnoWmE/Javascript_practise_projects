@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quiz App</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+
+<div class="container">
+    <div id="quiz-ques-answer">
+        <h1>Coding Quiz</h1>
+        <div id="quiz">
+            <h2 id="question"> Question</h2>
+            <div class="list-group m-1" id="answer">
+                </div>
+        </div>
+        <div class="prev-next-button">
+            <button class="btn btn-danger" id="prev-btn">Prev</button>
+            <button class="btn btn-warning" id="next-btn">Next</button>
+        </div>
+    </div>
+    <div id="quiz-result">
+
+        <h1>Congratulations!</h1>
+        <p>You've completed the <b>Coding Quiz</b>. It was super fun talking to you.</p>
+        <p>We hope you've learned something new today.</p>
+        <p>Your quiz score is:</p>
+        <div class="circular-ring">
+            <svg class="progress-ring" width="120" height="120">
+                <!-- Background circle -->
+                <circle class="progress-ring__background" r="50" cx="60" cy="60"/>
+                <!-- Animated foreground circle -->
+                <circle class="progress-ring__circle" id="score-ring" r="50" cx="60" cy="60"/>
+            </svg>
+            <div class="progress-text" id="score">0%</div>
+        </div>
+        <div class="restart-finish-button">
+        <button class="btn btn-warning btn-sm" id="restart-btn">Restart Quiz</button>
+        <button class="btn btn-success btn-sm" id="finish-btn">Finish</button>
+        </div>
+    </div>
+
+    <div id="start-quiz">
+
+        <div class="d-flex justify-content-center">
+            <div class="bg-white p-5 rounded-4 shadow-lg text-center m-3" style="max-width: 400px;">
+                <h1 class="text-dark fs-2 fw-bold mb-4">Welcome to coding Quiz</h1>
+                <img src="coding.jpg" class="img-fluid rounded-3 mb-4" alt="Coding" style="max-height: 180px; object-fit: cover;">
+                <button class="btn btn-success btn-lg w-100 fw-semibold py-3 shadow" id="start-quiz-btn">Start Quiz</button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+<script type="module" src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
